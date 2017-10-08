@@ -39,7 +39,7 @@
             this.checkBoxGreen = new System.Windows.Forms.CheckBox();
             this.checkBoxBlue = new System.Windows.Forms.CheckBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxColor = new System.Windows.Forms.ComboBox();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.radioButtonBlack = new System.Windows.Forms.RadioButton();
@@ -179,13 +179,14 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(80, 71);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
-            // comboBox1
+            // comboBoxColor
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(244, 171);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(80, 21);
-            this.comboBox1.TabIndex = 4;
+            this.comboBoxColor.FormattingEnabled = true;
+            this.comboBoxColor.Location = new System.Drawing.Point(244, 171);
+            this.comboBoxColor.Name = "comboBoxColor";
+            this.comboBoxColor.Size = new System.Drawing.Size(80, 21);
+            this.comboBoxColor.TabIndex = 4;
+            this.comboBoxColor.SelectedIndexChanged += new System.EventHandler(this.comboBoxColor_SelectedIndexChanged);
             // 
             // pictureBox
             // 
@@ -316,7 +317,7 @@
             this.ClientSize = new System.Drawing.Size(337, 283);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.pictureBox);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxColor);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
@@ -344,7 +345,7 @@
         private System.Windows.Forms.CheckBox checkBoxGreen;
         private System.Windows.Forms.CheckBox checkBoxBlue;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxColor;
         private System.Windows.Forms.TrackBar trackBarRed;
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;

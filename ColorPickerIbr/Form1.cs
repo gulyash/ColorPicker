@@ -37,6 +37,23 @@ namespace ColorPickerIbr
                 {radioButtonCyan, Color.Cyan },
                 {radioButtonWhite, Color.White },
             };
+
+            List<Color> colors = new List<Color>
+            {
+                Color.Aquamarine,
+                Color.Beige,
+                Color.BurlyWood,
+                Color.Coral,
+                Color.Crimson,
+                Color.DarkOliveGreen,
+                Color.Gainsboro,
+                Color.Gray,
+                Color.Maroon
+            };
+            comboBoxColor.DataSource = colors;
+            comboBoxColor.DisplayMember = Name;
+
+            comboBoxColor.SelectedIndexChanged += comboBoxColor_SelectedIndexChanged;
         }
 
         private void trackBarRed_Scroll(object sender, EventArgs e)
@@ -106,6 +123,14 @@ namespace ColorPickerIbr
                 trackBarBlue.Enabled = false;
                 SelectedColor = Color.FromArgb(pictureBox.BackColor.R, pictureBox.BackColor.G, 0);
             }
+        }
+
+        private void comboBoxColor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            checkBoxRed.Checked = true;
+            checkBoxGreen.Checked = true;
+            checkBoxBlue.Checked = true;
+            SelectedColor = (Color)comboBoxColor.SelectedItem;
         }
     }
 }
