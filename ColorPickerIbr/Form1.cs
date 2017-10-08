@@ -62,5 +62,50 @@ namespace ColorPickerIbr
                 SelectedColor = commonColors[rb];
             }
         }
+
+        private void checkBoxRed_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = (CheckBox)sender; // приводим отправителя к элементу типа CheckBox
+            if (checkBox.Checked == true)
+            {
+                trackBarRed.Enabled = true;
+                SelectedColor = Color.FromArgb(trackBarRed.Value, pictureBox.BackColor.G, pictureBox.BackColor.B);
+            }
+            else
+            {
+                trackBarRed.Enabled = false;
+                SelectedColor = Color.FromArgb(0, pictureBox.BackColor.G, pictureBox.BackColor.B);
+            }
+        }
+
+        private void checkBoxGreen_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = (CheckBox)sender; // приводим отправителя к элементу типа CheckBox
+            if (checkBox.Checked == true)
+            {
+                trackBarGreen.Enabled = true;
+                SelectedColor = Color.FromArgb(pictureBox.BackColor.R, trackBarGreen.Value, pictureBox.BackColor.B);
+            }
+            else
+            {
+                trackBarGreen.Enabled = false;
+                SelectedColor = Color.FromArgb(pictureBox.BackColor.R, 0, pictureBox.BackColor.B);
+            }
+        }
+
+        private void checkBoxBlue_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = (CheckBox)sender; // приводим отправителя к элементу типа CheckBox
+            if (checkBox.Checked == true)
+            {
+                trackBarBlue.Enabled = true;
+                SelectedColor = Color.FromArgb(pictureBox.BackColor.R, pictureBox.BackColor.G, trackBarBlue.Value);
+            }
+            else
+            {
+                trackBarBlue.Enabled = false;
+                SelectedColor = Color.FromArgb(pictureBox.BackColor.R, pictureBox.BackColor.G, 0);
+            }
+        }
     }
 }

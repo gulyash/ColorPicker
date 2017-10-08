@@ -35,9 +35,9 @@
             this.trackBarBlue = new System.Windows.Forms.TrackBar();
             this.trackBarGreen = new System.Windows.Forms.TrackBar();
             this.trackBarRed = new System.Windows.Forms.TrackBar();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBoxRed = new System.Windows.Forms.CheckBox();
+            this.checkBoxGreen = new System.Windows.Forms.CheckBox();
+            this.checkBoxBlue = new System.Windows.Forms.CheckBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox = new System.Windows.Forms.PictureBox();
@@ -130,41 +130,50 @@
             this.trackBarRed.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackBarRed.Scroll += new System.EventHandler(this.trackBarRed_Scroll);
             // 
-            // checkBox1
+            // checkBoxRed
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(3, 3);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(71, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Красный";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxRed.AutoSize = true;
+            this.checkBoxRed.Checked = true;
+            this.checkBoxRed.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxRed.Location = new System.Drawing.Point(3, 3);
+            this.checkBoxRed.Name = "checkBoxRed";
+            this.checkBoxRed.Size = new System.Drawing.Size(71, 17);
+            this.checkBoxRed.TabIndex = 0;
+            this.checkBoxRed.Text = "Красный";
+            this.checkBoxRed.UseVisualStyleBackColor = true;
+            this.checkBoxRed.CheckedChanged += new System.EventHandler(this.checkBoxRed_CheckedChanged);
             // 
-            // checkBox2
+            // checkBoxGreen
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(3, 26);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(71, 17);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Зеленый";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBoxGreen.AutoSize = true;
+            this.checkBoxGreen.Checked = true;
+            this.checkBoxGreen.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxGreen.Location = new System.Drawing.Point(3, 26);
+            this.checkBoxGreen.Name = "checkBoxGreen";
+            this.checkBoxGreen.Size = new System.Drawing.Size(71, 17);
+            this.checkBoxGreen.TabIndex = 1;
+            this.checkBoxGreen.Text = "Зеленый";
+            this.checkBoxGreen.UseVisualStyleBackColor = true;
+            this.checkBoxGreen.CheckedChanged += new System.EventHandler(this.checkBoxGreen_CheckedChanged);
             // 
-            // checkBox3
+            // checkBoxBlue
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(3, 49);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(57, 17);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "Синий";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBoxBlue.AutoSize = true;
+            this.checkBoxBlue.Checked = true;
+            this.checkBoxBlue.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxBlue.Location = new System.Drawing.Point(3, 49);
+            this.checkBoxBlue.Name = "checkBoxBlue";
+            this.checkBoxBlue.Size = new System.Drawing.Size(57, 17);
+            this.checkBoxBlue.TabIndex = 2;
+            this.checkBoxBlue.Text = "Синий";
+            this.checkBoxBlue.UseVisualStyleBackColor = true;
+            this.checkBoxBlue.CheckedChanged += new System.EventHandler(this.checkBoxBlue_CheckedChanged);
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.checkBox1);
-            this.flowLayoutPanel1.Controls.Add(this.checkBox2);
-            this.flowLayoutPanel1.Controls.Add(this.checkBox3);
+            this.flowLayoutPanel1.Controls.Add(this.checkBoxRed);
+            this.flowLayoutPanel1.Controls.Add(this.checkBoxGreen);
+            this.flowLayoutPanel1.Controls.Add(this.checkBoxBlue);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(244, 94);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(80, 71);
@@ -331,9 +340,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBoxRed;
+        private System.Windows.Forms.CheckBox checkBoxGreen;
+        private System.Windows.Forms.CheckBox checkBoxBlue;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TrackBar trackBarRed;
