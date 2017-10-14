@@ -58,17 +58,17 @@ namespace ColorPickerIbr
 
         private void trackBarRed_Scroll(object sender, EventArgs e)
         {
-            SelectedColor = Color.FromArgb(trackBarRed.Value, trackBarGreen.Value, trackBarBlue.Value);
+            SelectedColor = Color.FromArgb(trackBarRed.Value, pictureBox.BackColor.G, pictureBox.BackColor.B);
         }
 
         private void trackBarGreen_Scroll(object sender, EventArgs e)
         {
-            SelectedColor = Color.FromArgb(trackBarRed.Value, trackBarGreen.Value, trackBarBlue.Value);
+            SelectedColor = Color.FromArgb(pictureBox.BackColor.R, trackBarGreen.Value, pictureBox.BackColor.B);
         }
 
         private void trackBarBlue_Scroll(object sender, EventArgs e)
         {
-            SelectedColor = Color.FromArgb(trackBarRed.Value, trackBarGreen.Value, trackBarBlue.Value);
+            SelectedColor = Color.FromArgb(pictureBox.BackColor.R, pictureBox.BackColor.G, trackBarBlue.Value);
         }
 
         private void radioButtonBlack_CheckedChanged(object sender, EventArgs e)
@@ -82,7 +82,7 @@ namespace ColorPickerIbr
 
         private void checkBoxRed_CheckedChanged(object sender, EventArgs e)
         {
-            CheckBox checkBox = (CheckBox)sender; // приводим отправителя к элементу типа CheckBox
+            CheckBox checkBox = (CheckBox)sender;
             if (checkBox.Checked == true)
             {
                 trackBarRed.Enabled = true;
